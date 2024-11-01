@@ -1,0 +1,55 @@
+.scrollable-wrap {
+	position: relative;
+}
+.scrollable.vertical {
+	/* required settings */
+	position:relative;
+	overflow:hidden;
+
+	/* vertical scrollers have typically larger height than width */
+	width: 100%;
+}
+
+/* root element for scrollable items */
+.items {
+	position: absolute;
+
+	/* this time we have very large space for height */
+	height: 20000em;
+	width: 100%;
+	margin: 0px;
+}
+
+/* single scrollable item */
+.item {
+}
+
+.actions a.disabled {
+	cursor: default;
+}
+
+/* the action buttons above the scrollable */
+.actions {
+	position: absolute;
+	top: 40%;
+	left: -50px;
+}
+.actions a {
+	position: relative;
+	z-index: 100;
+	cursor: pointer;
+	display: block;
+	width: 18px; height: 19px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url(../images/scroll-arrows.png) no-repeat;
+}
+.actions a:hover {
+	background-position: top right;
+}
+.actions a.next {
+	background-position: bottom left;
+}
+.actions a.next:hover {
+	background-position: bottom right;
+}

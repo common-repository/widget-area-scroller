@@ -1,0 +1,14 @@
+.scroller {
+	position: relative;
+	z-index: 1000;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+.scroller:hover {
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+}
+.scroller.active {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
